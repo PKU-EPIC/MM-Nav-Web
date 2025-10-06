@@ -136,10 +136,30 @@
     </div>
   </section>
 
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <h2 class="title is-3">Summary Video</h2>
+            <div class="publication-video">
+              <!---TODO Dhruv: put video link here-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VMB5vY6cMNU?si=I7c0W638XwqwrZ2i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section class="hero teaser">
     <div class="container is-max-desktop is-centered has-text-justified is-size-5">
       <div class="hero-body">
-        <img src="./static/images/pipeline.png" alt="teaser Image" width="100%">
         <p>
           We introduce <strong>MM-Nav</strong>, as a multi-view VLA (with 360° observation) based on pretrained large language models and visual
           foundation models. For large-scale navigation data, we collect expert data from three reinforcement learning (RL)
@@ -229,22 +249,52 @@
           Our pipeline comprises two steps: (1) training of multiple RL experts with different capabilities and <br> initial VLA
           finetuning, (2) teachers-student online training iteration between RL experts and VLA.<br>
           <br>
+          <img src="./static/images/pipeline.png" alt="teaser Image" width="80%">
+
         </h2>
-        <div class="has-text-centered">
+
+
+
+<div class="columns is-centered">
+  <div class="column is-half has-text-centered">
+    <h2 class="title is-5 has-text-centered">Stage 1</h2>
+    <h2 class="subtitle has-text-centered">
+      We first train RL experts in different environments and collect<br>
+      successful trajectories for VLA fine-tuning.
+    </h2>
+
+    <div class="text-image-container title is-3">
+      <img src="static/images/strategy1.png" style="width:70%; height:auto;">
+    </div>
+  </div>
+
+  <div class="column is-half has-text-centered">
+    <h2 class="title is-5 has-text-centered">Stage 2</h2>
+    <h2 class="subtitle has-text-centered">
+      We then collect RL expert data online based on VLA observations<br>
+      and dynamically balance the training data ratio.
+    </h2>
+
+    <div class="text-image-container title is-3">
+      <img src="static/images/strategy2.png" style="width:75%; height:auto;">
+    </div>
+  </div>
+</div>
+
+
+        <!-- <div class="has-text-centered">
           <h2 class="title is-5 has-text-centered">Stage 1</h2>
           <h2 class="subtitle has-text-centered">
             We first train RL experts in different environments and collect<br>
             successful trajectories for VLA fine-tuning.
           </h2>
-          <!-- <video poster="static/images/strategy1.png" id="video1" controls muted loop width="640" preload="metadata">
-            <source src="static/videos/strategy1.mp4" type="video/mp4">
-          </video> -->
+
           <div class="text-image-container title is-3">
             <img src="static/images/strategy1.png" style="width:50%; height:auto;">
           </div>
+        </div> -->
 
-        </div>
-        <div class="has-text-centered">
+        <!-- <div class="has-text-centered">
           <h2 class="title is-5 has-text-centered">
             <br>
             Stage 2
@@ -253,18 +303,15 @@
             We then collect RL expert data online based on VLA observations<br>
             and dynamically balance the training data ratio.
           </h2>
-          <!-- <video poster="static/images/strategy2.png" id="video1" controls muted loop width="640" preload="metadata">
-            <source src="static/videos/strategy2.mp4" type="video/mp4">
-          </video> -->
-            <!-- <figure class="image" style="width: 550px;">
-              <img src="static/images/strategy2.png" style="width:100%; height:auto;">
-            </figure> -->
+
           <div class="text-image-container title is-3">
             <img src="static/images/strategy2.png" style="width:50%; height:auto;">
           </div>
+        </div> -->
 
 
-        </div>
+
+
         <div class="has-text-centered">
           <h2 class="subtitle has-text-centered">
             <br>
@@ -283,6 +330,9 @@
             </div>
           </div>
         </div>
+
+
+        
       </div>
     </div>
   </section>
